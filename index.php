@@ -3,8 +3,6 @@
 
 function getPokemonData()
 {
-
-
     $pokemons = [];
     for ($i = 0; $i < 4; $i++) {
         // 1) genera número aleatorio
@@ -37,7 +35,6 @@ function getPokemonData()
         array_push($pokemons, $pokemon);
     }
 
-
     return $pokemons;
 }
 
@@ -52,7 +49,6 @@ function renderCards($pokeArray)
         $shiny = itsShiny();
         $classShiny = $shiny ? 'shiny' : '';
         $img = $shiny ? 'front_shiny' : 'front_default';
-
 
         echo "<div class='carta " . $classShiny . " " . $pokemon["tipos"][0] . "'>";
         echo "<div class='img-container'>";
@@ -86,9 +82,6 @@ function itsShiny()
     }
 }
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +96,6 @@ function itsShiny()
 
 <body>
     <h1>PokeCartas</h1>
-
     <!--     <section id="pokecartas">
         <div class="carta">
             <div class="img-container">
@@ -123,10 +115,8 @@ function itsShiny()
                 </div>
             </div>
         </div>
-
     </section> -->
     <?php renderCards($pokemon)
     ?>
 </body>
-
 </html>
