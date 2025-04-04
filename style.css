@@ -3,20 +3,90 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #B0B0B0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #FFCC00;
+    text-shadow:
+        -4px -4px 0px rgba(0, 0, 0, 0.8),
+        4px -4px 0px rgba(0, 0, 0, 0.8),
+        -4px 4px 0px rgba(0, 0, 0, 0.8),
+        4px 4px 0px rgba(0, 0, 0, 0.8);
+    font-size: 4em;
+}
+
+a {
+    display: flex;
+    background-color: #1E4D7B;
+    text-decoration: none;
+    color: #FFCC00;
+    font-size: 2em;
+    border-radius: 6px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
 .contenedor {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 16px;
     justify-content: flex-start;
+    padding: 20px
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: visible;
+    }
+
+    .carta {
+        flex: 1 1 45%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carta {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
 }
 
 .carta {
     max-width: 200px;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 6px;
+    flex: 1 1 200px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     flex: 1 1 200px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
 
+}
+
+.carta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1;
 }
 
 .img-container {
@@ -24,11 +94,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* background-color: #f0f0f0; */
     border-radius: 12px;
-    border: 1px solid #e5e5e5;
+    border: 5px solid white;
+}
 
+
+.datos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .tipos-pokemon {
@@ -44,9 +120,20 @@
     }
 }
 
+.habilidades {
+    text-align: left;
+    padding-left: 16px;
+}
+
 .shiny {
     border: 4px solid #ffcc00;
     box-shadow: 0 0 10px 5px rgba(255, 204, 0, 0.6);
+}
+
+.shiny:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px 5px rgba(255, 204, 0, 0.6);
+    z-index: 1;
 }
 
 .grass {
@@ -122,5 +209,10 @@
 
 .rock {
     background-color: #B8A038;
+    border-radius: 12px;
+}
+
+.fairy {
+    background-color: #F1A7C4;
     border-radius: 12px;
 }

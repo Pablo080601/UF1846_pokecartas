@@ -4,7 +4,7 @@
 function getPokemonData()
 {
     $pokemons = [];
-    for ($i = 0; $i < 4; $i++) {
+    for ($i = 0; $i < 5; $i++) {
         // 1) genera número aleatorio
         $pokemon_id = rand(1, 151);
         // 2) lee el contenido de la api 
@@ -118,5 +118,6 @@ function itsShiny()
     </section> -->
     <?php renderCards($pokemon)
     ?>
+    <a href="index.php">Nuevas cartas</a>
 </body>
 </html>
