@@ -7,4 +7,4 @@ Esto es un proyecto para obtener informacion de una api(https://pokeapi.co/) y c
 - Php
 - Html
 - Css
-- JASON
+- JSON
